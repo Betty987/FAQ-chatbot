@@ -63,6 +63,7 @@ HealthPal/
 │   ├── chat/
 │   │   ├── llm.py              # Gemini LLM integration
 │   │   ├── rag.py              # Graph RAG implementation
+│   │   
 │   └── knowledge_graph/
 │       ├── schema.metta        # MeTTa schema definition
 │       └── data.metta          # Knowledge graph data
@@ -73,4 +74,3 @@ HealthPal/
 ├── requirements.txt            # Python dependencies
 └── .env                        # Environment variables (create this)
 ```
-
