@@ -1,6 +1,6 @@
-# Domain-Specific FAQ Chatbot with Knowledge Graph Integration
+# HealthPal
 
-A powerful FAQ chatbot that combines MeTTa knowledge graphs with Google's Gemini 2.0 LLM for enhanced, context-aware responses. Features multimodal capabilities, automatic knowledge extraction, and rich interactive responses.
+A Healthcare and Wellness FAQ chatbot that combines MeTTa knowledge graphs with Google's Gemini 2.0 LLM for enhanced, context-aware responses. Features multimodal capabilities, automatic knowledge extraction, and rich interactive responses.
 
 ## 🌟 Features
 
@@ -9,7 +9,6 @@ A powerful FAQ chatbot that combines MeTTa knowledge graphs with Google's Gemini
 - **Graph RAG**: Retrieval-Augmented Generation for context-aware responses
 - **Real-time Updates**: Support for adding new FAQs, entities, and relationships
 - **Context-Aware Answers**: Understands relationships and hierarchies within the domain
-- **Multimodal Support**: Process and respond to images with text
 - **Rich Responses**: Provides text, images, links, and interactive elements
 - **Automatic Knowledge Extraction**: Extract entities, relationships, and FAQs from text and images
 
@@ -49,70 +48,6 @@ This script will:
 2. Open the demo interface in your default web browser
 3. Handle server shutdown when you're done
 
-
-## 📜 Project Scripts
-
-The project includes several scripts to simplify setup, running, and testing:
-
-### `start.sh` - Unix/Mac Startup Script
-
-A Bash script that handles the complete setup and startup process:
-
-```bash
-./start.sh
-```
-for documentations -> `http://localhost:8000/docs`
-
-- Creates a Python virtual environment if it doesn't exist
-- Activates the virtual environment
-- Installs all dependencies from requirements.txt
-- Checks for a .env file and prompts for Gemini API key if needed
-- Starts the FastAPI server
-
-### `start.bat` - Windows Startup Script
-
-A Windows batch file that performs the same functions as start.sh but for Windows:
-
-```bash
-start.bat
-```
-for documentations -> `http://localhost:8000/docs`
-
-- Creates a Python virtual environment if it doesn't exist
-- Activates the virtual environment
-- Installs all dependencies from requirements.txt
-- Checks for a .env file and prompts for Gemini API key if needed
-- Starts the FastAPI server
-
-### `start_demo.py` - Cross-Platform Demo Launcher
-
-A Python script that provides a more interactive startup experience:
-
-```bash
-python start_demo.py
-```
-for documentations -> `http://localhost:8000/docs`
-
-
-- Checks if the server is already running
-- Starts the server if needed
-- Opens the demo interface in your default web browser
-- Handles graceful shutdown of the server when you're done
-
-<!-- ### `test_multimodal.py` - Multimodal Testing Script
-
-A Python script for testing the multimodal capabilities:
-
-```bash
-python test_multimodal.py path/to/image.jpg "What is in this image?"
-```
-
-- Sends an image and a question to the chatbot API
-- Displays the formatted response
-- Useful for testing the image analysis capabilities -->
-
-## 🛠️ Manual Setup
-
 ### Prerequisites
 
 - Python 3.9+
@@ -122,8 +57,8 @@ python test_multimodal.py path/to/image.jpg "What is in this image?"
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/CryptoMaN-Rahul/metta
-   cd metta
+   git clone https://github.com/Betty987/FAQ-chatbot.git
+   cd FAQ-chatbot
    ```
 
 2. Create a virtual environment:
@@ -161,10 +96,9 @@ python test_multimodal.py path/to/image.jpg "What is in this image?"
 The demo interface (`demo.html`) provides a complete experience:
 
 1. **Chat Interface**: Ask questions and get rich, formatted responses
-2. **Image Upload**: Upload images for multimodal analysis
-3. **Knowledge Graph Visualization**: See the knowledge graph grow in real-time
-4. **Knowledge Management**: Add new FAQs, entities, and relationships
-5. **Knowledge Extraction**: Extract knowledge from text and images
+2. **Knowledge Graph Visualization**: See the knowledge graph grow in real-time
+3. **Knowledge Management**: Add new FAQs, entities, and relationships
+4. **Knowledge Extraction**: Extract knowledge from text and images
 
 To use the demo:
 1. Start the server using one of the methods above
@@ -172,7 +106,6 @@ To use the demo:
 3. Type questions in the chat input or upload images
 4. View the knowledge graph visualization to see connections
 
-### API Endpoints Reference
 
 #### Chat Endpoints
 
@@ -212,69 +145,7 @@ Content-Type: application/json
 }
 ```
 
-2. **Add Entity**
-```http
-POST /entity
-Content-Type: application/json
 
-{
-    "name": "Knowledge Graph",
-    "entity_type": "Concept",
-    "properties": {
-        "definition": {
-            "value": "A knowledge graph is a network of entities, their semantic types, properties, and relationships.",
-            "metadata": "source: documentation confidence: 0.9"
-        },
-        "created_by": {
-            "value": "Google",
-            "metadata": "year: 2012"
-        }
-    }
-}
-```
-
-3. **Add Relationship**
-```http
-POST /relationship
-Content-Type: application/json
-
-{
-    "from_entity": "Knowledge Graph",
-    "relationship_type": "is_a",
-    "to_entity": "Semantic Network",
-    "context": "confidence: 0.85"
-}
-```
-
-#### Knowledge Extraction Endpoints
-
-1. **Extract from Text**
-```http
-POST /extract/text
-Content-Type: application/json
-
-{
-    "text": "Knowledge graphs are a type of semantic network used to store interlinked descriptions of entities."
-}
-```
-
-2. **Extract from Document**
-```http
-POST /extract/document
-Content-Type: application/json
-
-{
-    "text": "Long document text with multiple paragraphs..."
-}
-```
-
-3. **Extract from Image**
-```http
-POST /extract/image
-Content-Type: multipart/form-data
-
-file: image.jpg
-```
 
 ## 📁 Project Structure
 
@@ -285,7 +156,6 @@ domain-specific-faq-chatbot/
 │   ├── chat/
 │   │   ├── llm.py              # Gemini LLM integration
 │   │   ├── rag.py              # Graph RAG implementation
-│   │   └── auto_extractor.py   # Automatic entity extraction
 │   └── knowledge_graph/
 │       ├── schema.metta        # MeTTa schema definition
 │       └── data.metta          # Knowledge graph data
@@ -296,32 +166,4 @@ domain-specific-faq-chatbot/
 ├── requirements.txt            # Python dependencies
 └── .env                        # Environment variables (create this)
 ```
-
-## 🔧 Technical Details
-
-### Knowledge Graph
-
-The knowledge graph is implemented using MeTTa, a knowledge representation language that combines functional and logical programming paradigms. The graph stores:
-
-- Entities with properties and metadata
-- Relationships between entities with context
-- FAQs with categories and related concepts
-- Category hierarchies and synonyms
-
-### Graph RAG
-
-The Graph RAG (Retrieval-Augmented Generation) system:
-
-1. Analyzes the user's question
-2. Queries the knowledge graph for relevant context
-3. Formats the context for the LLM
-4. Generates a response using the LLM with the context
-
-### Multimodal Processing
-
-The system can process images along with text:
-
-1. Images are analyzed to extract entities and concepts
-2. Extracted entities are added to the knowledge graph
-3. The LLM generates responses considering both the text and image content
 
