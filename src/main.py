@@ -7,7 +7,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from dotenv import load_dotenv
-
 from chat.llm import GeminiLLM
 from chat.rag import GraphRAG
 import logging
@@ -74,23 +73,23 @@ class FAQEntry(BaseModel):
     category: str
     concepts: Optional[str] = None
 
-class PropertyValue(BaseModel):
-    value: str
-    metadata: str
+# class PropertyValue(BaseModel):
+#     value: str
+#     metadata: str
 
-class Entity(BaseModel):
-    name: str
-    entity_type: str
-    properties: Optional[Dict[str, PropertyValue]] = None
+# class Entity(BaseModel):
+#     name: str
+#     entity_type: str
+#     properties: Optional[Dict[str, PropertyValue]] = None
 
-class Relationship(BaseModel):
-    from_entity: str
-    relationship_type: str
-    to_entity: str
-    context: Optional[str] = ""
+# class Relationship(BaseModel):
+#     from_entity: str
+#     relationship_type: str
+#     to_entity: str
+#     context: Optional[str] = ""
 
-class DocumentExtraction(BaseModel):
-    text: str
+# class DocumentExtraction(BaseModel):
+#     text: str
 
 @app.post("/chat", response_model=Answer)
 async def chat(question: Question):

@@ -5,15 +5,13 @@ A Healthcare and Wellness FAQ chatbot that combines MeTTa knowledge graphs with 
 ![index Preview](./assets/frontpage.png)  
 
 
-## 🌟 Features
+##  Features
 
 - **Knowledge Graph Integration**: Uses MeTTa for structured knowledge representation
 - **LLM Integration**: Leverages Google Gemini 2.0 for natural language understanding
 - **Graph RAG**: Retrieval-Augmented Generation for context-aware responses
-- **Real-time Updates**: Support for adding new FAQs, entities, and relationships
+- **Real-time Updates**: Support for adding new FAQs
 - **Context-Aware Answers**: Understands relationships and hierarchies within the domain
-- **Rich Responses**: Provides text, images, links, and interactive elements
-- **Automatic Knowledge Extraction**: Extract entities, relationships, and FAQs from text and images
 
 ### Prerequisites
 
@@ -24,8 +22,8 @@ A Healthcare and Wellness FAQ chatbot that combines MeTTa knowledge graphs with 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Betty987/FAQ-chatbot.git
-   cd FAQ-chatbot
+   git clone https://github.com/Betty987/HealthPal.git
+   cd HealthPal
    ```
 
 2. Create a virtual environment:
@@ -47,19 +45,19 @@ A Healthcare and Wellness FAQ chatbot that combines MeTTa knowledge graphs with 
     ```bash
    python start_demo.py
    ```
+6. Alternatively,you can run
+    ```bash
+    # Make the script executable (if not already)
+    chmod +x start.sh
 
-```bash
-# Make the script executable (if not already)
-chmod +x start.sh
-
-# Run the start script
-./start.sh
+    # Run the start script
+    ./start.sh
 ```
 
 ## 📁 Project Structure
 
 ```
-domain-specific-faq-chatbot/
+HealthPal/
 ├── src/
 │   ├── main.py                 # FastAPI server and API endpoints
 │   ├── chat/

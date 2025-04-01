@@ -1,5 +1,5 @@
 from typing import List, Dict, Any, Optional
-from hyperon import MeTTa, E, S, V, G
+from hyperon import MeTTa
 import re
 
 class GraphRAG:
