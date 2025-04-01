@@ -1,6 +1,6 @@
 # HealthPal👨🏻‍⚕️
 
-A Healthcare and Wellness FAQ chatbot that combines MeTTa knowledge graphs with Google's Gemini 2.0 LLM for enhanced, context-aware responses.
+A Mental health,therapy and wellness FAQ chatbot that combines MeTTa knowledge graphs with Google's Gemini 2.0 LLM for enhanced, context-aware responses.
 
 ![index Preview](./assets/frontpage.png)  
 
@@ -53,4 +53,3 @@ A Healthcare and Wellness FAQ chatbot that combines MeTTa knowledge graphs with 
     # Run the start script
     ./start.sh
 ```
-
