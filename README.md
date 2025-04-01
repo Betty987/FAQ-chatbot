@@ -57,13 +57,13 @@ A Healthcare and Wellness FAQ chatbot that combines MeTTa knowledge graphs with 
 ## 📁 Project Structure
 
 ```
-HealthPal/
+domain-specific-faq-chatbot/
 ├── src/
 │   ├── main.py                 # FastAPI server and API endpoints
 │   ├── chat/
 │   │   ├── llm.py              # Gemini LLM integration
 │   │   ├── rag.py              # Graph RAG implementation
-│   │   
+│   │   └── auto_extractor.py   # Automatic entity extraction
 │   └── knowledge_graph/
 │       ├── schema.metta        # MeTTa schema definition
 │       └── data.metta          # Knowledge graph data
@@ -71,6 +71,13 @@ HealthPal/
 ├── demo.html                   # Interactive demo interface
 ├── start_demo.py               # Script to start demo and open browser
 ├── start.sh                    # Unix/Mac startup script
+├── start.bat                   # Windows startup script
+├── start_demo.bat              # Windows demo launcher
+├── test_multimodal.py          # Script to test multimodal capabilities
+├── MULTIMODAL_TESTING.md       # Guide for testing multimodal features
+├── PRESENTATION_GUIDE.md       # Guide for presenting the project
 ├── requirements.txt            # Python dependencies
+├── Dockerfile                  # Docker configuration
+├── docker-compose.yml          # Docker Compose configuration
 └── .env                        # Environment variables (create this)
 ```
