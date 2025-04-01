@@ -6,6 +6,10 @@ import mimetypes
 from google import genai
 from dotenv import load_dotenv
 import re
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 load_dotenv()
 
@@ -154,18 +158,17 @@ Your response should be informative, accurate, and helpful.
         formatted_text = re.sub(definition_pattern, r'<div class="definition"><b>\1:</b> \2</div>', formatted_text)
         
         # Format technical terms
-        tech_terms = ["MeTTa", "GraphRAG", "Knowledge Graph", "Gemini", "Neo4j", "Entity Extraction", 
-                      "Multimodal", "LLM", "RAG", "API"]
-        for term in tech_terms:
-            formatted_text = re.sub(r'\b' + re.escape(term) + r'\b', r'<code>\g<0></code>', formatted_text)
+        health_terms = ["Mental Health", "Therapy", "CBT", "Anxiety", "Depression", "Meditation", "Stress", "Healthcare"]
+        for term in health_terms:
+            formatted_text = re.sub(r'\b' + re.escape(term) + r'\b', r'<b>\g<0></b>', formatted_text)
         
         # Add paragraph breaks
         formatted_text = "<p>" + formatted_text.replace("\n\n", "</p><p>") + "</p>"
         
         # Add links for common references
-        formatted_text = formatted_text.replace("MeTTa documentation", '<a href="https://github.com/trueagi-io/metta" target="_blank">MeTTa documentation</a>')
-        formatted_text = formatted_text.replace("Gemini API", '<a href="https://ai.google.dev/gemini-api" target="_blank">Gemini API</a>')
-        formatted_text = formatted_text.replace("Neo4j", '<a href="https://neo4j.com/" target="_blank">Neo4j</a>')
+        formatted_text = formatted_text.replace("WHO", '<a href="https://www.who.int/health-topics/mental-health" target="_blank">WHO</a>')
+        formatted_text = formatted_text.replace("Mayo Clinic", '<a href="https://www.mayoclinic.org/diseases-conditions" target="_blank">Mayo Clinic</a>')
+        formatted_text = formatted_text.replace("NIMH", '<a href="https://www.nimh.nih.gov/health/topics" target="_blank">NIMH</a>')
         
         return formatted_text
     

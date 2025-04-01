@@ -1,223 +1,210 @@
 ;; Sample FAQ entries with related concepts
-(FAQ "What is a knowledge graph?" 
-     "A knowledge graph is a network of entities, their properties, and relationships between them. It helps organize and connect information in a structured way."
+(FAQ "What is mental health?"
+     "Mental health refers to a person’s emotional, psychological, and social well-being. It affects how individuals think, feel, and act, and influences how they handle stress, relate to others, and make choices."
      "Basics"
-     "knowledge_representation data_structure graph_database semantic_web")
+     "mental_wellness emotional_health psychology well_being")
 
-(FAQ "How does the chatbot use the knowledge graph?"
-     "The chatbot uses the knowledge graph to understand relationships between concepts, find relevant context, and provide more accurate and detailed answers by leveraging connected information."
+(FAQ "How can therapy help with mental health?"
+     "Therapy helps by providing a safe space to explore emotions, develop coping strategies, and address mental health conditions like anxiety or depression through techniques such as cognitive-behavioral therapy (CBT) or talk therapy."
+     "Therapy"
+     "therapy mental_health coping_strategies emotional_support")
+
+(FAQ "What is cognitive-behavioral therapy (CBT)?"
+     "Cognitive-behavioral therapy (CBT) is a type of psychotherapy that helps individuals identify and change negative thought patterns and behaviors to improve emotional regulation and mental health."
+     "Therapy"
+     "cbt psychotherapy mental_health cognitive_therapy")
+
+(FAQ "Can I add new health information to the chatbot?"
+     "Yes, you can add new FAQs, health conditions, or therapy techniques through the API endpoints. The knowledge graph updates in real-time to include this information."
      "Usage"
-     "chatbot knowledge_graph context_awareness semantic_search")
+     "api knowledge_management real_time_updates health_data")
 
-(FAQ "Can I add new information to the knowledge graph?"
-     "Yes, you can add new FAQs, entities, and relationships through the API endpoints. The knowledge graph updates in real-time to incorporate new information."
-     "Usage"
-     "api knowledge_management real_time_updates data_entry")
+(FAQ "What is anxiety?"
+     "Anxiety is a mental health condition characterized by excessive worry, fear, or nervousness. It can manifest physically (e.g., rapid heartbeat) and emotionally (e.g., restlessness) and may require therapy or medication."
+     "MentalHealth"
+     "anxiety mental_health symptoms treatment")
 
-(FAQ "What is MeTTa?"
-     "MeTTa is a knowledge representation language designed for graph-based knowledge storage and querying. It combines functional and logical programming paradigms to represent and manipulate knowledge in a structured way."
-     "Technical"
-     "metta programming_language knowledge_representation graph_processing")
+(FAQ "How does meditation benefit mental health?"
+     "Meditation benefits mental health by reducing stress, improving focus, and promoting emotional balance. It activates relaxation responses in the brain and can be a complementary therapy for anxiety or depression."
+     "Therapy"
+     "meditation mental_health stress_reduction mindfulness")
 
-(FAQ "How does MeTTa differ from other knowledge representation languages?"
-     "MeTTa differs from other knowledge representation languages by combining functional and logical programming paradigms, providing a flexible way to represent and query knowledge graphs. It has a bracket-based syntax similar to Lisp and supports pattern matching through its match function."
-     "Technical"
-     "metta programming_language comparison functional_programming logical_programming")
+(FAQ "What is depression?"
+     "Depression is a common mental health disorder marked by persistent sadness, loss of interest, and low energy. It can be treated with therapy, medication, or lifestyle changes."
+     "MentalHealth"
+     "depression mental_health symptoms treatment")
 
-(FAQ "What is Graph RAG?"
-     "Graph RAG (Retrieval-Augmented Generation) is an approach that enhances language model responses by retrieving relevant information from a knowledge graph. It combines the structured knowledge of graphs with the natural language capabilities of LLMs for more accurate and contextual responses."
-     "Technical"
-     "rag retrieval_augmented_generation knowledge_graph llm")
+(FAQ "How can I recognize stress symptoms?"
+     "Stress symptoms include physical signs (e.g., headaches, fatigue), emotional signs (e.g., irritability), and behavioral changes (e.g., sleep issues). Chronic stress may require medical or therapeutic intervention."
+     "MentalHealth"
+     "stress symptoms health_management")
 
-(FAQ "What are the advantages of using a knowledge graph with an LLM?"
-     "Using a knowledge graph with an LLM provides several advantages: more accurate and factual responses, better handling of complex relationships, improved context awareness, reduced hallucinations, and the ability to incorporate domain-specific knowledge that may not be in the LLM's training data."
-     "Basics"
-     "knowledge_graph llm advantages context_awareness factuality")
+(FAQ "What is mindfulness?"
+     "Mindfulness is a practice of staying present and fully engaged in the current moment, often used in therapy to reduce stress and improve mental clarity. It’s closely related to meditation."
+     "Therapy"
+     "mindfulness mental_health stress_reduction focus")
 
-(FAQ "How can I extract entities from text and add them to the knowledge graph?"
-     "You can extract entities from text using the /extract/text or /extract/document API endpoints. These use AI to identify entities, their properties, and relationships, then automatically add them to the knowledge graph. You can also manually add entities using the /entity endpoint."
-     "Usage"
-     "entity_extraction api knowledge_management")
+(FAQ "How can I improve my sleep for better mental health?"
+     "Improving sleep involves establishing a routine, avoiding screens before bed, and managing stress. Good sleep enhances mood, reduces anxiety, and supports overall mental health."
+     "MentalHealth"
+     "sleep mental_health stress_management wellness")
 
-(FAQ "What is multimodal understanding in chatbots?"
-     "Multimodal understanding refers to a chatbot's ability to process and understand multiple types of input, such as text and images. This allows the chatbot to analyze images, extract information from them, and combine this with textual context to provide more comprehensive responses."
-     "Technical"
-     "multimodal image_processing computer_vision text_analysis")
+(FAQ "What is talk therapy?"
+     "Talk therapy, or psychotherapy, involves discussing emotions and experiences with a trained therapist to address mental health issues, build coping skills, and improve well-being."
+     "Therapy"
+     "talk_therapy psychotherapy mental_health emotional_support")
+
+(FAQ "Can exercise help with mental health?"
+     "Yes, exercise boosts mental health by releasing endorphins, reducing stress, and improving mood. It’s often recommended alongside therapy for conditions like depression and anxiety."
+     "Therapy"
+     "exercise mental_health stress_reduction endorphins")
+
+(FAQ "What are panic attacks?"
+     "Panic attacks are sudden episodes of intense fear or discomfort, often with physical symptoms like chest pain or shortness of breath. They’re linked to anxiety and can be managed with therapy or breathing techniques."
+     "MentalHealth"
+     "panic_attacks anxiety symptoms treatment")
+
+(FAQ "How do I know if I need therapy?"
+     "You might need therapy if you feel overwhelmed, experience persistent sadness, anxiety, or have trouble coping with daily life. A professional can assess your needs."
+     "MentalHealth"
+     "therapy mental_health self_assessment support")
+
+(FAQ "What is bipolar disorder?"
+     "Bipolar disorder is a mental health condition characterized by extreme mood swings, including manic highs and depressive lows. It’s managed with medication and therapy."
+     "MentalHealth"
+     "bipolar_disorder mental_health symptoms treatment")
+
+(FAQ "How can I support someone with depression?"
+     "Support someone with depression by listening without judgment, encouraging professional help, and offering practical assistance like helping with daily tasks."
+     "MentalHealth"
+     "depression support mental_health caregiving")
 
 ;; Sample entities with metadata
-(Entity "KnowledgeGraph" "Concept")
-(Property "KnowledgeGraph" "definition" 
-         "A structured representation of knowledge" 
-         "source: academic_literature confidence: 0.95")
-(Property "KnowledgeGraph" "purpose" 
-         "To organize and connect information" 
-         "source: technical_documentation confidence: 0.9")
+(Entity "MentalHealth" "Concept")
+(Property "MentalHealth" "definition"
+         "State of emotional and psychological well-being"
+         "source: WHO confidence: 0.95")
+(Property "MentalHealth" "importance"
+         "Affects daily functioning and quality of life"
+         "source: medical_literature confidence: 0.9")
 
-(Entity "ChatbotSystem" "System")
-(Property "ChatbotSystem" "type" 
-         "FAQ Assistant" 
+(Entity "Therapy" "Concept")
+(Property "Therapy" "definition"
+         "Treatment to improve mental or physical health"
+         "source: medical_dictionary confidence: 0.95")
+(Property "Therapy" "types"
+         "CBT, talk therapy, physical therapy"
+         "source: healthcare_guidelines confidence: 0.9")
+
+(Entity "CBT" "TherapyType")
+(Property "CBT" "full_name"
+         "Cognitive-Behavioral Therapy"
+         "source: psychology_text confidence: 0.95")
+(Property "CBT" "purpose"
+         "Modify negative thoughts and behaviors"
+         "source: clinical_studies confidence: 0.9")
+(Property "CBT" "effectiveness"
+         "High for anxiety and depression"
+         "source: research_papers confidence: 0.85")
+
+(Entity "Anxiety" "Condition")
+(Property "Anxiety" "definition"
+         "Excessive worry or fear affecting daily life"
+         "source: DSM-5 confidence: 0.95")
+(Property "Anxiety" "symptoms"
+         "Restlessness, rapid heartbeat, sweating"
+         "source: medical_literature confidence: 0.9")
+(Property "Anxiety" "treatment"
+         "Therapy, medication, relaxation techniques"
+         "source: healthcare_guidelines confidence: 0.85")
+
+(Entity "Depression" "Condition")
+(Property "Depression" "definition"
+         "Persistent sadness and loss of interest"
+         "source: DSM-5 confidence: 0.95")
+(Property "Depression" "symptoms"
+         "Fatigue, hopelessness, sleep disturbances"
+         "source: medical_literature confidence: 0.9")
+(Property "Depression" "treatment"
+         "Antidepressants, therapy, lifestyle changes"
+         "source: clinical_guidelines confidence: 0.9")
+
+(Entity "Meditation" "Technique")
+(Property "Meditation" "definition"
+         "Practice of focused attention for relaxation"
+         "source: wellness_studies confidence: 0.9")
+(Property "Meditation" "benefits"
+         "Reduces stress, improves focus"
+         "source: research_papers confidence: 0.85")
+
+(Entity "Stress" "Condition")
+(Property "Stress" "definition"
+         "Body’s response to physical or emotional pressure"
+         "source: medical_literature confidence: 0.95")
+(Property "Stress" "symptoms"
+         "Headaches, irritability, sleep problems"
+         "source: health_guides confidence: 0.9")
+
+(Entity "HealthcareChatbot" "System")
+(Property "HealthcareChatbot" "type"
+         "Mental Health Assistant"
          "version: 1.0 status: active")
-(Property "ChatbotSystem" "capability" 
-         "Natural language understanding" 
-         "framework: gemini confidence: 0.85")
-
-(Entity "MeTTa" "Technology")
-(Property "MeTTa" "type" 
-         "Knowledge representation language" 
-         "version: latest source: official_docs")
-(Property "MeTTa" "purpose" 
-         "Graph-based knowledge storage and querying" 
-         "source: technical_spec confidence: 0.9")
-(Property "MeTTa" "syntax" 
-         "Bracket-based, similar to Lisp" 
-         "source: documentation confidence: 0.95")
-(Property "MeTTa" "paradigm" 
-         "Combines functional and logical programming" 
-         "source: technical_spec confidence: 0.9")
-(Property "MeTTa" "key_feature" 
-         "Pattern matching through match function" 
-         "source: documentation confidence: 0.95")
-
-(Entity "Gemini" "Technology")
-(Property "Gemini" "type" 
-         "Large Language Model" 
-         "version: 2.0 provider: Google")
-(Property "Gemini" "version" 
-         "2.0" 
-         "release_date: 2024 status: active")
-(Property "Gemini" "provider" 
-         "Google" 
-         "source: official reliability: high")
-(Property "Gemini" "capability" 
-         "Multimodal understanding (text, images, video)" 
-         "source: official documentation confidence: 0.95")
-(Property "Gemini" "use_case" 
-         "Natural language understanding and generation" 
-         "source: technical_documentation confidence: 0.9")
-
-(Entity "GraphRAG" "Concept")
-(Property "GraphRAG" "definition" 
-         "Retrieval-Augmented Generation using knowledge graphs" 
-         "source: research_papers confidence: 0.9")
-(Property "GraphRAG" "purpose" 
-         "Enhance LLM responses with structured knowledge" 
-         "source: technical_documentation confidence: 0.85")
-(Property "GraphRAG" "advantage" 
-         "Improved factuality and context awareness" 
-         "source: research_papers confidence: 0.9")
-
-(Entity "EntityExtraction" "Concept")
-(Property "EntityExtraction" "definition" 
-         "Process of identifying entities and relationships from unstructured data" 
-         "source: technical_documentation confidence: 0.9")
-(Property "EntityExtraction" "method" 
-         "AI-based analysis of text and images" 
-         "source: implementation_details confidence: 0.85")
-(Property "EntityExtraction" "purpose" 
-         "Populate knowledge graphs from unstructured sources" 
-         "source: technical_documentation confidence: 0.9")
-
-(Entity "MultimodalUnderstanding" "Concept")
-(Property "MultimodalUnderstanding" "definition" 
-         "Ability to process and understand multiple types of input (text, images, etc.)" 
-         "source: research_papers confidence: 0.9")
-(Property "MultimodalUnderstanding" "application" 
-         "Enhanced chatbot capabilities with visual context" 
-         "source: implementation_details confidence: 0.85")
-(Property "MultimodalUnderstanding" "challenge" 
-         "Aligning information across different modalities" 
-         "source: research_papers confidence: 0.8")
-
-(Entity "GraphDatabase" "Technology")
-(Property "GraphDatabase" "definition" 
-         "Database designed to store and query graph-structured data" 
-         "source: technical_documentation confidence: 0.95")
-(Property "GraphDatabase" "example" 
-         "Neo4j, Amazon Neptune, JanusGraph" 
-         "source: industry_survey confidence: 0.9")
-(Property "GraphDatabase" "query_language" 
-         "Cypher, Gremlin, SPARQL" 
-         "source: technical_documentation confidence: 0.9")
-
-(Entity "Neo4j" "Technology")
-(Property "Neo4j" "type" 
-         "Graph database management system" 
-         "source: official_documentation confidence: 0.95")
-(Property "Neo4j" "query_language" 
-         "Cypher" 
-         "source: official_documentation confidence: 0.95")
-(Property "Neo4j" "use_case" 
-         "Knowledge graphs, recommendation systems, fraud detection" 
-         "source: case_studies confidence: 0.9")
+(Property "HealthcareChatbot" "capability"
+         "Provides therapy advice and health info"
+         "framework: gemini confidence: 0.9")
 
 ;; Sample relationships with context
-(Relationship "ChatbotSystem" "uses" "KnowledgeGraph" 
-             "core_component integration_level: high")
-(Relationship "ChatbotSystem" "uses" "MeTTa" 
-             "for_knowledge_representation confidence: 0.9")
-(Relationship "ChatbotSystem" "uses" "Gemini" 
-             "for_natural_language_understanding confidence: 0.95")
-(Relationship "KnowledgeGraph" "implementedIn" "MeTTa" 
-             "primary_implementation confidence: 0.9")
-(Relationship "ChatbotSystem" "implements" "GraphRAG" 
-             "for_enhanced_responses confidence: 0.9")
-(Relationship "ChatbotSystem" "uses" "EntityExtraction" 
-             "for_knowledge_acquisition confidence: 0.85")
-(Relationship "ChatbotSystem" "implements" "MultimodalUnderstanding" 
-             "for_image_and_text_processing confidence: 0.9")
-(Relationship "GraphRAG" "uses" "KnowledgeGraph" 
-             "as_knowledge_source confidence: 0.95")
-(Relationship "GraphRAG" "enhances" "Gemini" 
-             "with_structured_knowledge confidence: 0.9")
-(Relationship "EntityExtraction" "populates" "KnowledgeGraph" 
-             "from_unstructured_data confidence: 0.9")
-(Relationship "MultimodalUnderstanding" "enhances" "EntityExtraction" 
-             "with_visual_information confidence: 0.85")
-(Relationship "KnowledgeGraph" "storedIn" "GraphDatabase" 
-             "for_efficient_querying confidence: 0.9")
-(Relationship "Neo4j" "isA" "GraphDatabase" 
-             "popular_implementation confidence: 0.95")
+(Relationship "HealthcareChatbot" "supports" "MentalHealth"
+             "primary_function confidence: 0.95")
+(Relationship "HealthcareChatbot" "uses" "Therapy"
+             "for_mental_health_support confidence: 0.9")
+(Relationship "Therapy" "treats" "Anxiety"
+             "common_application confidence: 0.9")
+(Relationship "Therapy" "treats" "Depression"
+             "standard_treatment confidence: 0.9")
+(Relationship "CBT" "isA" "Therapy"
+             "specific_type confidence: 0.95")
+(Relationship "Meditation" "reduces" "Stress"
+             "proven_benefit confidence: 0.85")
+(Relationship "Anxiety" "causes" "Stress"
+             "common_relationship confidence: 0.9")
+(Relationship "Depression" "causes" "Stress"
+             "frequent_outcome confidence: 0.85")
+(Relationship "HealthcareChatbot" "recommends" "Meditation"
+             "for_stress_management confidence: 0.9")
+(Relationship "MentalHealth" "affectedBy" "Stress"
+             "key_factor confidence: 0.95")
 
 ;; Sample categories with descriptions
-(Category "Basics" "Root" 
-         "Fundamental concepts and definitions")
-(Category "Usage" "Root" 
-         "How to use and interact with the system")
-(Category "Technical" "Root" 
-         "Technical details and implementation specifics")
-(Category "Implementation" "Technical" 
-         "Specific implementation details and technologies")
-(Category "Concepts" "Basics" 
-         "Theoretical concepts and principles")
-(Category "Features" "Usage" 
-         "Specific features and capabilities of the system")
+(Category "Basics" "Root"
+         "Fundamental concepts in healthcare and mental health")
+(Category "Therapy" "Root"
+         "Therapeutic approaches and techniques")
+(Category "MentalHealth" "Root"
+         "Mental health conditions and management")
+(Category "Usage" "Root"
+         "How to use the healthcare chatbot")
+(Category "Conditions" "MentalHealth"
+         "Specific mental health disorders")
+(Category "Techniques" "Therapy"
+         "Practical therapy methods and tools")
 
 ;; Sample synonyms with confidence scores
-(Synonym "KnowledgeGraph" "KG" 0.95)
-(Synonym "KnowledgeGraph" "Knowledge Base" 0.85)
-(Synonym "ChatbotSystem" "FAQ Assistant" 0.9)
-(Synonym "MeTTa" "Meta Language" 0.8)
-(Synonym "GraphRAG" "Graph-based RAG" 0.9)
-(Synonym "GraphRAG" "Knowledge Graph RAG" 0.85)
-(Synonym "EntityExtraction" "Entity Recognition" 0.9)
-(Synonym "EntityExtraction" "Information Extraction" 0.8)
-(Synonym "MultimodalUnderstanding" "Multimodal AI" 0.9)
-(Synonym "MultimodalUnderstanding" "Cross-modal Understanding" 0.8)
-(Synonym "GraphDatabase" "Graph DB" 0.95)
-(Synonym "Neo4j" "Neo4j Graph Database" 0.9)
+(Synonym "MentalHealth" "Mental Wellness" 0.9)
+(Synonym "Therapy" "Counseling" 0.95)
+(Synonym "CBT" "Cognitive Therapy" 0.9)
+(Synonym "Anxiety" "Nervousness" 0.85)
+(Synonym "Depression" "Sadness Disorder" 0.8)
+(Synonym "Meditation" "Mindfulness" 0.95)
+(Synonym "Stress" "Tension" 0.9)
+(Synonym "HealthcareChatbot" "Health Assistant" 0.9)
 
 ;; Sample context relationships with weights
-(Context "KnowledgeGraph" "semantic_search" 0.9)
-(Context "KnowledgeGraph" "data_storage" 0.8)
-(Context "ChatbotSystem" "user_interaction" 0.95)
-(Context "MeTTa" "graph_processing" 0.9)
-(Context "Gemini" "natural_language_processing" 0.95)
-(Context "Gemini" "image_understanding" 0.9)
-(Context "GraphRAG" "information_retrieval" 0.9)
-(Context "GraphRAG" "context_awareness" 0.85)
-(Context "EntityExtraction" "natural_language_processing" 0.9)
-(Context "EntityExtraction" "computer_vision" 0.8)
-(Context "MultimodalUnderstanding" "computer_vision" 0.9)
-(Context "MultimodalUnderstanding" "natural_language_processing" 0.9)
-(Context "GraphDatabase" "data_management" 0.9)
-(Context "Neo4j" "graph_query" 0.95) 
+(Context "MentalHealth" "emotional_wellness" 0.95)
+(Context "Therapy" "mental_health_support" 0.9)
+(Context "CBT" "thought_management" 0.9)
+(Context "Anxiety" "fear_response" 0.9)
+(Context "Depression" "mood_disorder" 0.95)
+(Context "Meditation" "stress_relief" 0.9)
+(Context "Stress" "health_impact" 0.9)
+(Context "HealthcareChatbot" "patient_support" 0.95)
